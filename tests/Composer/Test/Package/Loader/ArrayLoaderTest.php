@@ -149,7 +149,7 @@ class ArrayLoaderTest extends \PHPUnit_Framework_TestCase
     {
         $package = $this->loader->load($config);
         $dumper = new ArrayDumper;
-        $expectedConfig = $this->fixConfigWhenLoadConfigIsFalse($config);
+        $expectedConfig = $config;
         $this->assertEquals($expectedConfig, $dumper->dump($package));
     }
 
